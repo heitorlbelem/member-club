@@ -16,6 +16,12 @@
 
   /* RESET FONT SIZE */
   font-size: 62.5%;
+
+  --p-xl: 3.2rem;
+  --p-lg: 2.4rem;
+  --p-md: 1.6rem;
+  --p-sm: 1.2rem;
+  --p-xs: .8rem;
 }
 
 /* RESET STYLE */
@@ -32,4 +38,27 @@ body {
 
 *, *::after, *::before {
   font-family: var(--ff-base);
+}
+
+main {
+  padding-inline: var(--p-sm);
+  padding-bottom: var(--p-xl);
+
+  display: grid;
+  gap: .8rem;
+}
+
+@media (width >= 48rem) {
+  main {
+    grid-template-areas:
+      "hero loyalty-card"
+      "history loyalty-card"
+      "history progress"
+    ;
+
+    & #hero { grid-area: hero; }
+    & #loyalty-card { grid-area: loyalty-card; }
+    & #history { grid-area: history; }
+  }
+
 }

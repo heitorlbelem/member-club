@@ -1,7 +1,9 @@
 body > header {
   width: 100%;
   margin-inline: auto;
-  padding: 3.2rem 1.2rem;
+  padding-top: var(--p-xl);
+  padding-inline: var(--p-md);
+  margin-bottom: 2rem;
 
   & .input-wrapper {
     margin-top: 1.6rem;
@@ -9,11 +11,12 @@ body > header {
     background: var(--gray-300);
     border: 2px solid var(--gray-400);
     border-radius: 1.2rem;
-    padding: .8rem;
+    padding-inline: var(--p-xs);
+    padding-block: var(--p-xs);
 
     & input {
       width: 100%;
-      padding: .8rem;
+      padding: var(--p-xs);
       border: none;
       outline: none;
 
@@ -33,7 +36,8 @@ body > header {
 
       outline: none;
       border: none;
-      padding: 1rem;
+      padding-inline: var(--p-sm);
+      padding-block: var(--p-sm);
       border-radius: .8rem;
 
       transition: opacity 200ms;

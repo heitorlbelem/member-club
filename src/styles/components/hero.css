@@ -1,5 +1,5 @@
 #hero {
-  padding: 1.6rem;
+  padding: var(--p-md);
 
   & .profile-background {
     background: linear-gradient(
