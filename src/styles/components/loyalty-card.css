@@ -1,6 +1,5 @@
 #loyalty-card {
   padding: 2.4rem 2rem;
-  height: fit-content;
 
   & > header {
     margin-bottom: 2rem;
@@ -27,6 +26,7 @@
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     row-gap: .8rem;
     column-gap: .8rem;
 
@@ -56,12 +56,19 @@
     }
 
     & > ul[role="list"] {
-      list-style: none;
-  
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      row-gap: 1.6rem;
-      column-gap: 1.6rem;
+      grid-template-columns: repeat(5, 8.8rem);
+      grid-template-rows: repeat(2, 8.8rem);
+      gap: 1.6rem;
+
+      & li {
+        width: 100%;
+        height: 100%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
