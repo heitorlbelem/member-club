@@ -1,4 +1,6 @@
 #history {
+  padding: 2.4rem 2rem;
+
   & header {
     margin-bottom: 1.6rem;
     color: var(--gray-500);
@@ -7,7 +9,10 @@
   & ul[role="list"] {
     list-style: none;
 
-    padding-top: 1.2rem;
+    max-height: 26rem;
+    overflow-y: scroll;
+
+    padding: 1.2rem .8rem 0;
     border-top: 1px solid var(--gray-300);
 
     & li {
@@ -25,5 +30,11 @@
     background-color: rgba(69, 180, 66, .12);
     border-radius: 50%;
     padding: var(--p-sm);
+  }
+}
+
+@media (width >= 64em) {
+  #history {
+    padding: 2.8rem 2.4rem;
   }
 }

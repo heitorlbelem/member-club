@@ -1,4 +1,6 @@
 #progress {
+  padding: 2rem;
+
   & div:first-child {
     width: 100%;
 
@@ -48,5 +50,11 @@
     height: 5.6rem;
     border-radius: 50%;
     padding: var(--p-md);
+  }
+}
+
+@media (width >= 64em) {
+  #progress {
+    padding: 2.7rem 3.2rem;
   }
 }

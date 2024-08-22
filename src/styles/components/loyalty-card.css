@@ -1,4 +1,7 @@
 #loyalty-card {
+  padding: 2.4rem 2rem;
+  height: fit-content;
+
   & > header {
     margin-bottom: 2rem;
 
@@ -21,6 +24,12 @@
 
   & > ul[role="list"] {
     list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: .8rem;
+    column-gap: .8rem;
+
     width: 100%;
 
     & li {
@@ -30,6 +39,29 @@
       border-radius: 1.2rem;
 
       background-color: var(--gray-200);
+    }
+  }
+}
+
+@media (width >= 64em) {
+  #loyalty-card {
+    padding: 3.6rem 3.2rem;
+
+    & > header {
+      margin-bottom: 2rem;
+  
+      & div:first-child {
+        width: 60%;
+      }
+    }
+
+    & > ul[role="list"] {
+      list-style: none;
+  
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      row-gap: 1.6rem;
+      column-gap: 1.6rem;
     }
   }
 }
