@@ -7,15 +7,31 @@
 }
 
 .items-center {
-  align-items: center
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .justify-center {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .gap-md {
   gap: 1.6rem;
+}
+
+.gap-sm {
+  gap: .8rem;
 }
 
 .grid {
@@ -24,4 +40,8 @@
 
 .only-desktop {
   display: none;
+}
+
+.px-1\.2 {
+  padding-inline: 1.2rem;
 }

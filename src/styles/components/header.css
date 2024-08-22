@@ -1,10 +1,10 @@
 body > header {
   width: 100%;
-
   margin-inline: auto;
   padding: 3.2rem 1.2rem;
 
   & .input-wrapper {
+    margin-top: 1.6rem;
     width: 100%;
     background: var(--gray-300);
     border: 2px solid var(--gray-400);
@@ -43,5 +43,11 @@ body > header {
         opacity: 1;
       }
     }
+  }
+}
+
+@media (width >= 80em) {
+  body > header {
+    max-width: 40rem;
   }
 }

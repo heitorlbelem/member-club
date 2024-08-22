@@ -11,15 +11,6 @@
   --gray-100: #F4F1F2;
   --white: #FFFFFF;
 
-  /* DEFAULT GRADIENT VARIABLE */
-  --gradient-base: linear-gradient(
-    90deg,
-    #2DAA6E 0%,
-    #2DAAAA 33%,
-    #856CCF 67%,
-    #D658B3 100%
-  );
-
   /* BASE FONT VARIABLE */
   --ff-base: "Oxygen", sans-serif;
 

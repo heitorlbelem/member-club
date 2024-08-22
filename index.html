@@ -21,34 +21,36 @@
     </div>
 
   </header>
-  <main>
-    <div id="hero" class="card">
-      <img src="https://github.com/heitorlbelem.png" alt="">
+  <main class="flex flex-column gap-sm px-1.2">
+    <div id="hero" class="card flex items-center gap-md">
+      <div class="profile-background">
+        <img src="https://github.com/heitorlbelem.png" alt="">
+      </div>
       <div id="client-info">
-        <h1> Heitor Belém </h1>
-        <p> Cliente desde 18/09/2023 </p>
+        <h1 class="title-sm"> Heitor Belém </h1>
+        <p class="text-xs"> Cliente desde 18/09/2023 </p>
       </div>
     </div>
 
     <div id="loyalty-card" class="card">
-      <header>
+      <header class="flex items-start justify-between">
         <div>
-          <p>cartão fidelidade</p>
-          <small>Ao fazer cortes de cabelo, o décimo sai de graça</small>
+          <p class="subtitle-sm">cartão fidelidade</p>
+          <small class="text-xs">Ao fazer cortes de cabelo, o décimo sai de graça</small>
         </div>
-        <span>ID: 123-456-789-123</span>
+        <span class="subtitle-sm">ID: 123-456-789-123</span>
       </header>
-      <ul>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
-        <li><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+      <ul role="list" class="flex wrap gap-sm items-center">
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/pincheck.svg" alt=""></li>
         <li></li>
         <li></li>
-        <li><img src="./src/assets/icons/gift.svg" alt=""></li>
+        <li class="flex items-center justify-center"><img src="./src/assets/icons/gift.svg" alt=""></li>
       </ul>
     </div>
   </main>
