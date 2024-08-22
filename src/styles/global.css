@@ -1,0 +1,44 @@
+:root {
+  /* COLOR VARIABLES */
+  --pink: #D658B3;
+  --green: #45B442;
+  --gray-700: #332B31;
+  --gray-600: #4A4448;
+  --gray-500: #756C71;
+  --gray-400: #D3CFD2;
+  --gray-300: #DFDCDF;
+  --gray-200: #E9E7E9;
+  --gray-100: #F4F1F2;
+  --white: #FFFFFF;
+
+  /* DEFAULT GRADIENT VARIABLE */
+  --gradient-base: linear-gradient(
+    90deg,
+    #2DAA6E 0%,
+    #2DAAAA 33.33%,
+    #856CCF 66.67%,
+    #D658B3 100%
+  );
+
+  /* BASE FONT VARIABLE */
+  --ff-base: "Oxygen", sans-serif;
+
+  /* RESET FONT SIZE */
+  font-size: 62.5%;
+}
+
+/* RESET STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-200);
+  width: 100%;
+}
+
+*, *::after, *::before {
+  font-family: var(--ff-base);
+}

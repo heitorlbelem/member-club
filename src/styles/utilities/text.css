@@ -1,0 +1,29 @@
+.title-md {
+  font: 700 2.4rem/1.4 var(--ff-base);
+}
+
+.title-sm {
+  font: 700 1.8rem/1.4 var(--ff-base);
+}
+
+.subtitle-md {
+  font: 700 1.4rem/1.4 var(--ff-base);
+  text-transform: uppercase;
+}
+
+.subtitle-sm {
+  font: 700 1.2rem/1.4 var(--ff-base);
+  text-transform: uppercase;
+}
+
+.text-md {
+  font: 400 1.6rem/1.4 var(--ff-base);
+}
+
+.text-sm {
+  font: 400 1.4rem/1.4 var(--ff-base);
+}
+
+.text-xs {
+  font: 400 1.2rem/1.4 var(--ff-base);
+}
