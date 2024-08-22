@@ -51,7 +51,7 @@ main {
   margin: 0 auto;
 }
 
-@media (width >= 48rem) {
+@media (width >= 64em) {
   main {
     grid-template-areas:
       "hero loyalty-card"
@@ -59,6 +59,7 @@ main {
       "history progress"
     ;
 
+    grid-template-columns: 32rem 56.8rem;
     gap: 1.6rem 2.4rem;
 
     & #hero { grid-area: hero; }

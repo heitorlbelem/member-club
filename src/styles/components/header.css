@@ -1,9 +1,8 @@
 body > header {
-  width: 100%;
-  margin-inline: auto;
+  margin: 0 auto 2rem;
   padding-top: var(--p-xl);
   padding-inline: var(--p-md);
-  margin-bottom: 2rem;
+  max-width: 91.2rem;
 
   & .input-wrapper {
     margin-top: 1.6rem;
@@ -50,8 +49,10 @@ body > header {
   }
 }
 
-@media (width >= 48rem) {
+@media (width >= 64em) {
   body > header {
     width: 40rem;
+
+    margin-bottom: 3.2rem;
   }
 }
