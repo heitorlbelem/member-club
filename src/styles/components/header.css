@@ -50,8 +50,8 @@ body > header {
   }
 }
 
-@media (width >= 80em) {
+@media (width >= 48rem) {
   body > header {
-    max-width: 40rem;
+    width: 40rem;
   }
 }
