@@ -2,17 +2,27 @@ import { getClientById } from "./services/get-client-by-id"
 
 const form = document.querySelector("form")
 const clientId = document.getElementById("client-id")
+const loyalty = document.getElementById("loyalty-card")
+const cutsList = loyalty.querySelector("ul[role='list']")
+const idSpan = document.querySelector("#loyalty-card header span")
 
 form.onsubmit = async (event) => {
   event.preventDefault()
+
   try {
     const id = clientId.value
     if(!id) {
       return alert("É necessário informar um ID")
     }
-    const { name, clientSince } = await getClientById({ id })
+    const {
+      name,
+      clientSince,
+      appointmentHistory,
+      loyaltyCard
+    } = await getClientById({ id })
 
     fillHeroInformation({ name, clientSince })
+    fillLoyaltyCard({ id, loyaltyCard })
 
   } catch(error) {
     console.error(error)
@@ -27,4 +37,14 @@ function fillHeroInformation({ name, clientSince }) {
 
   clientName.innerText = name
   createdAt.innerHTML = `Cliente desde ${clientSince}`
+}
+
+function fillLoyaltyCard({ id, loyaltyCard }) {
+  const cutsDone = loyaltyCard.totalCuts
+  idSpan.innerText = `ID: ${id}`
+  
+  for (let i = 0; i < cutsDone; i++) {
+    const item = cutsList.querySelector(`li:nth-child(${i + 1})`)
+    item.innerHTML = `<img src="./src/assets/icons/pincheck.svg" alt="" />`
+  }
 }
