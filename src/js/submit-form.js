@@ -7,6 +7,7 @@ const cutsList = loyalty.querySelector("ul[role='list']")
 const idSpan = document.querySelector("#loyalty-card header span")
 const progress = document.getElementById("progress-count")
 const pendingCuts = document.getElementById("pending-cuts")
+const currentProgressBar =  document.getElementById("current-progress-bar")
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -57,5 +58,5 @@ function fillLoyaltyCard({ id, loyaltyCard }) {
 function fillProgress({ totalCuts }) {
   progress.innerText = `${totalCuts} de 10`
   pendingCuts.innerHTML = `<strong>${10 - totalCuts}</strong> cortes restantes`
-
+  currentProgressBar.style.setProperty("--progress-percentage", `${totalCuts * 10}%`)
 }

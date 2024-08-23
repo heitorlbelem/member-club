@@ -18,7 +18,9 @@
       position: relative;
 
       & .current-progress {
+        --progress-percentage: 0%;
         width: 0%;
+
         height: .8rem;
         border-radius: 2rem;
 
@@ -26,6 +28,8 @@
         top: 0;
         left: 0;
         z-index: 1;
+
+        animation: fillProgressBar 5s ease forwards;
 
         background: linear-gradient(
           90deg,
@@ -56,5 +60,14 @@
 @media (width >= 64em) {
   #progress {
     padding: 2.7rem 3.2rem;
+  }
+}
+
+@keyframes fillProgressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-percentage);
   }
 }
