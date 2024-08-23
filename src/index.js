@@ -11,3 +11,6 @@ import "./styles/components/hero.css"
 import "./styles/components/loyalty-card.css"
 import "./styles/components/progress.css"
 import "./styles/components/history.css"
+
+import "./js/validate-client-input.js"
+import "./js/submit-form.js"
