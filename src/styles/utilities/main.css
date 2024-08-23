@@ -1,6 +1,3 @@
-@import url("./utilities/text.css");
-@import url("./utilities/display.css");
-
 .card {
   border-radius: 1.6rem;
   background-color: var(--gray-100);
