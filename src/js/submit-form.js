@@ -5,6 +5,8 @@ const clientId = document.getElementById("client-id")
 const loyalty = document.getElementById("loyalty-card")
 const cutsList = loyalty.querySelector("ul[role='list']")
 const idSpan = document.querySelector("#loyalty-card header span")
+const progress = document.getElementById("progress-count")
+const pendingCuts = document.getElementById("pending-cuts")
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -23,6 +25,9 @@ form.onsubmit = async (event) => {
 
     fillHeroInformation({ name, clientSince })
     fillLoyaltyCard({ id, loyaltyCard })
+
+    const { totalCuts } = loyaltyCard
+    fillProgress({ totalCuts })
 
   } catch(error) {
     console.error(error)
@@ -47,4 +52,10 @@ function fillLoyaltyCard({ id, loyaltyCard }) {
     const item = cutsList.querySelector(`li:nth-child(${i + 1})`)
     item.innerHTML = `<img src="./src/assets/icons/pincheck.svg" alt="" />`
   }
+}
+
+function fillProgress({ totalCuts }) {
+  progress.innerText = `${totalCuts} de 10`
+  pendingCuts.innerHTML = `<strong>${10 - totalCuts}</strong> cortes restantes`
+
 }

@@ -18,7 +18,7 @@
       position: relative;
 
       & .current-progress {
-        width: 80%;
+        width: 0%;
         height: .8rem;
         border-radius: 2rem;
 
