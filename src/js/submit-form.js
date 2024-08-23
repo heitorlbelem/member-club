@@ -8,6 +8,9 @@ const idSpan = document.querySelector("#loyalty-card header span")
 const progress = document.getElementById("progress-count")
 const pendingCuts = document.getElementById("pending-cuts")
 const currentProgressBar =  document.getElementById("current-progress-bar")
+const history = document.getElementById("history")
+const historyHeader = history.querySelector("header p")
+const historyList = history.querySelector("ul[role='list']")
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -26,10 +29,13 @@ form.onsubmit = async (event) => {
 
     fillHeroInformation({ name, clientSince })
     fillLoyaltyCard({ id, loyaltyCard })
-
+    fillHistory({ appointmentHistory })
     const { totalCuts } = loyaltyCard
     fillProgress({ totalCuts })
 
+    if(appointmentHistory.length === 10) {
+      return alert("Parabéns! Seu próximo corte é gratuito!")
+    }
   } catch(error) {
     console.error(error)
     return alert("Não foi possível encontrar o cliente")
@@ -59,4 +65,25 @@ function fillProgress({ totalCuts }) {
   progress.innerText = `${totalCuts} de 10`
   pendingCuts.innerHTML = `<strong>${10 - totalCuts}</strong> cortes restantes`
   currentProgressBar.style.setProperty("--progress-percentage", `${totalCuts * 10}%`)
+}
+
+function fillHistory({ appointmentHistory }) {
+  console.log(appointmentHistory)
+  const totalCuts = appointmentHistory.length
+  historyHeader.innerText = `${totalCuts} cortes`
+
+  appointmentHistory.forEach(el => {
+    console.log(el)
+
+    const li = document.createElement("li")
+    li.classList.add("flex", "items-center", "justify-between")
+    const p = document.createElement("p")
+    p.classList.add("subtitle-sm", "flex", "flex-column")
+    console.log(el)
+    p.innerHTML = `${el.date} <small>${el.time}</small>`
+    const check = document.createElement("span")
+    check.innerHTML = "<img src='./src/assets/icons/check.svg' alt=''>"
+    li.append(p, check)
+    historyList.append(li)
+  })
 }

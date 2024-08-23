@@ -10,16 +10,20 @@
         {"date": "01/02/2024", "time": "17:30"},
         {"date": "03/01/2024", "time": "15:00"},
         {"date": "28/11/2023", "time": "14:00"},
+        {"date": "23/10/2023", "time": "15:00"},
+        {"date": "23/10/2023", "time": "15:00"},
+        {"date": "23/10/2023", "time": "15:00"},
+        {"date": "23/10/2023", "time": "15:00"},
         {"date": "23/10/2023", "time": "15:00"}
       ],
       "loyaltyCard": {
-        "totalCuts": 7,
+        "totalCuts": 10,
         "cutsNeeded": 10,
-        "cutsRemaining": 3
+        "cutsRemaining": 0
       }
     },
     {
-      "id": "207-245-699-104",
+      "id": "123-123-123-123",
       "name": "Capitão Nascimento",
       "clientSince": "12/04/2023",
       "appointmentHistory": [
